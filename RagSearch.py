@@ -3,8 +3,12 @@ from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from datetime import datetime
 from search import DocumentSearcher
+from dotenv import load_dotenv
 
 class RagSearcher(DocumentSearcher):
+
+    load_dotenv()
+
     
     def __init__(self, db_path = "./chroma_db", openai_api_key =None): 
         super().__init__(db_path)
