@@ -1,4 +1,8 @@
 import chromadb
+
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from datetime import datetime
